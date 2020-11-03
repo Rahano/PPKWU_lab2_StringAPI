@@ -9,29 +9,33 @@ public class StringAnalyzer {
 
     @RequestMapping(path = "/stringAnalyzer")
     public String reverseString(@RequestParam(value = "input", required = false) String input){
+
         int lowerCaseCount = 0, upperCaseCount = 0, digitCount = 0, specialSymbolsCount = 0;
 
         char[] text = input.toCharArray();
 
-        for(char singleChar : text){
+        for ( char singleChar : text ){
 
-            if( Character.isLowerCase(singleChar) )
+            if ( Character.isLowerCase(singleChar) ){
                 lowerCaseCount++;
+            }
 
-            else if( Character.isUpperCase(singleChar) )
+            else if ( Character.isUpperCase(singleChar) ){
                 upperCaseCount++;
+            }
 
-            else if( Character.isDigit(singleChar) )
+            else if ( Character.isDigit(singleChar) ){
                 digitCount++;
+            }
 
-            else
+            else {
                 specialSymbolsCount++;
+            }
         }
 
         String result = "Input string contains:<br>" + lowerCaseCount + " lowercase chars<br>" + upperCaseCount + " uppercase chars<br>"
                 + digitCount + " digits<br>" + specialSymbolsCount + " special symbols";
 
         return result;
-
     }
 }
