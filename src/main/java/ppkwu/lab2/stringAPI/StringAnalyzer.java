@@ -9,8 +9,16 @@ public class StringAnalyzer {
 
     @RequestMapping(path = "/stringAnalyzer")
     public String reverseString(@RequestParam(value = "input", required = false) String input){
+        int lowerCaseCount = 0;
 
         char[] text = input.toCharArray();
+
+        for(char singleChar : text){
+
+            if( Character.isLowerCase(singleChar) )
+                lowerCaseCount++;
+
+        }
 
         return null;
 
