@@ -10,6 +10,8 @@ public class StringAnalyzer {
     @RequestMapping(path = "/stringAnalyzer")
     public String reverseString(@RequestParam(value = "input", required = false) String input){
 
+        char[] text = input.toCharArray();
+
         return null;
 
     }
