@@ -28,10 +28,10 @@ public class StringAnalyzer {
                 specialSymbolsCount++;
         }
 
-        String result = "Input string contains:\n" + lowerCaseCount + "lowercase chars\n" + upperCaseCount + "uppercase chars"
-                + digitCount + "digits" + specialSymbolsCount + "special symbols";
+        String result = "Input string contains:<br>" + lowerCaseCount + " lowercase chars<br>" + upperCaseCount + " uppercase chars<br>"
+                + digitCount + " digits<br>" + specialSymbolsCount + " special symbols";
 
-        return null;
+        return result;
 
     }
 }
