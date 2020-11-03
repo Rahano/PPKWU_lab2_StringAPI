@@ -9,7 +9,7 @@ public class StringAnalyzer {
 
     @RequestMapping(path = "/stringAnalyzer")
     public String reverseString(@RequestParam(value = "input", required = false) String input){
-        int lowerCaseCount = 0;
+        int lowerCaseCount = 0, upperCaseCount = 0, digitCount = 0, specialSymbolsCount = 0;
 
         char[] text = input.toCharArray();
 
@@ -18,6 +18,14 @@ public class StringAnalyzer {
             if( Character.isLowerCase(singleChar) )
                 lowerCaseCount++;
 
+            else if( Character.isUpperCase(singleChar) )
+                upperCaseCount++;
+
+            else if( Character.isDigit(singleChar) )
+                digitCount++;
+
+            else
+                specialSymbolsCount++;
         }
 
         return null;
